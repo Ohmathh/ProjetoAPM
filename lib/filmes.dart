@@ -6,10 +6,10 @@ class FilmesPage extends StatefulWidget {
   final String title;
 
   @override
-  Future<State<FilmesPage>> createState() async => FilmesPage();
+  State<FilmesPage> createState() => _FilmesPageState();
 }
 
-class FilmesPage extends State<FilmesPage> {
+class _FilmesPageState extends State<FilmesPage> {
   int _counter = 0;
 
   void _incluirAfazer() {

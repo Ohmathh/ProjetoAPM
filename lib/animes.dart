@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projetoapp/descricao.dart';
 
 class AnimesPage extends StatefulWidget {
   const AnimesPage({Key? key, required this.title}) : super(key: key);
@@ -28,44 +29,14 @@ class _AnimesPageState extends State<AnimesPage> {
         children: [
           ListTile(
             onTap: (){
-              print('item clicado 1');
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => DescricaoPage(title: 'Descrição '))
+              );
             },
-            title: Text('naruto'),
+            title: Text('Naruto'),
             leading: Image(
                 image: NetworkImage('https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg'),
               ),
-          ),
-          ListTile(
-            onTap: (){
-              print('item clicado 2');
-            },
-            leading: Icon(Icons.check_box),
-            title: Text('Afazer 2'),
-            subtitle: Text('sub 2'),
-          ),
-          ListTile(
-            onTap: (){
-              print('item clicado 3');
-            },
-            leading: Icon(Icons.check_box),
-            title: Text('Afazer 3'),
-            subtitle: Text('sub 3'),
-          ),
-          ListTile(
-            onTap: (){
-              print('item clicado 4');
-            },
-            leading: Icon(Icons.check_box),
-            title: Text('Afazer 4'),
-            subtitle: Text('sub 4'),
-          ),
-          ListTile(
-            onTap: (){
-              print('item clicado 5');
-            },
-            leading: Icon(Icons.check_box),
-            title: Text('Afazer 5'),
-            subtitle: Text('sub 5'),
           ),
         ],
       ),

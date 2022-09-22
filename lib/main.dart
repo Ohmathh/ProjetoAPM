@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepOrange,
       ),
-      home: const MyHomePage(title: 'ANIME'),
+      home: const MyHomePage(title: 'ANIMAAI'),
     );
   }
 }
@@ -42,18 +42,27 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: GridView.count(
-          crossAxisCount: 2,
+          crossAxisCount: 3,
           children: <Widget>[
             Card(
               color: Colors.amberAccent,
               child: InkWell(
                 onTap: (){
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => AnimesPage(title: 'Episodios '))
+                      MaterialPageRoute(builder: (context) => AnimesPage(title: 'Anime '))
                   );
                 },
-                child: const Text(
-                  'Animes ep',
+                child: const SizedBox(
+                  width: 100,
+                  height: 100,
+                  child: Text(
+                    textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.w800,
+                        fontSize: 30,
+                      ),
+                      "Animes"
+                  ),
                 ),
               ),
             ),
@@ -65,8 +74,17 @@ class _MyHomePageState extends State<MyHomePage> {
                       MaterialPageRoute(builder: (context) => SeriesPage(title: 'Series'))
                   );
                 },
-                child: Text(
-                  'Series ep',
+                child: const SizedBox(
+                  width: 100,
+                  height: 100,
+                  child: Text(
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.w800,
+                        fontSize: 30,
+                      ),
+                      "Series"
+                  ),
                 ),
               ),
             ),
@@ -78,8 +96,17 @@ class _MyHomePageState extends State<MyHomePage> {
                       MaterialPageRoute(builder: (context) => FilmesPage(title: 'Filmes'))
                   );
                 },
-                child: Text(
-                  'Filmes ep',
+                child: const SizedBox(
+                  width: 100,
+                  height: 100,
+                  child: Text(
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.w800,
+                        fontSize: 30,
+                      ),
+                      "Filmes"
+                  ),
                 ),
               ),
             ),
