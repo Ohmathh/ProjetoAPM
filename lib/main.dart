@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'animes.dart';
+import 'package:projetoapp/sugestoes.dart';
+import 'animes/animes.dart';
 
-import 'filmes.dart';
-import 'series.dart';
+import 'filmes/filmes.dart';
+import 'series/series.dart';
 
 void main() {
   runApp(const MyApp());
@@ -49,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: InkWell(
                 onTap: (){
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => AnimesPage(title: 'Anime '))
+                      MaterialPageRoute(builder: (context) => const AnimesPage(title: 'Anime '))
                   );
                 },
                 child: const SizedBox(
@@ -71,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: InkWell(
                 onTap: (){
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => SeriesPage(title: 'Series'))
+                      MaterialPageRoute(builder: (context) => const SeriesPage(title: 'Series'))
                   );
                 },
                 child: const SizedBox(
@@ -93,7 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: InkWell(
                 onTap: (){
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => FilmesPage(title: 'Filmes'))
+                      MaterialPageRoute(builder: (context) => const FilmesPage(title: 'Filmes'))
                   );
                 },
                 child: const SizedBox(
@@ -106,6 +107,28 @@ class _MyHomePageState extends State<MyHomePage> {
                         fontSize: 30,
                       ),
                       "Filmes"
+                  ),
+                ),
+              ),
+            ),
+            Card(
+              color: Colors.amberAccent,
+              child: InkWell(
+                onTap: (){
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const SugestoesPage(title: 'Sugestões'))
+                  );
+                },
+                child: const SizedBox(
+                  width: 100,
+                  height: 100,
+                  child: Text(
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.w800,
+                        fontSize: 30,
+                      ),
+                      "Sugestões"
                   ),
                 ),
               ),
